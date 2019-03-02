@@ -7,8 +7,6 @@ tags: [opencv, facedetection, deeplearning]
 comments: true
 ---
 
-**Source code co san o bai goc**
-
 ## Su dung deep learning trong OpenCV de detec khuon mat
 
 - Cho mot anh dau vao
