@@ -1,15 +1,14 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: ket noi de hoc hoi
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Ten toi la Nguyen Van Quan
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- Gia dinh la dieu tuyet voi nhat
+- Cuoc song muon van dieu ki dieu
 
-What else do you need?
 
 ### my history
 
