@@ -2,7 +2,8 @@
 layout: post
 title: Face detection
 subtitle: Su dung OpenCV va thu vien deep learning de detect khuon mat
-tags: [opencv]
+bigimg: /img/post1.1.PNG
+tags: [opencv, facedetection, deeplearning]
 comments: true
 ---
 
