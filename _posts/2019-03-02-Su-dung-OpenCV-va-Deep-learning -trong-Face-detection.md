@@ -32,3 +32,6 @@ ap.add_argument("-c", "--confidence", type=float, default=0.5,
 	help="minimum probability to filter weak detections")
 args = vars(ap.parse_args())
 ~~~
+
+## Demo nhieu khuon mat
+[Demo](https://github.com/quanap5/quanap5.github.io/blob/master/img/20190303_021246.mp4)
