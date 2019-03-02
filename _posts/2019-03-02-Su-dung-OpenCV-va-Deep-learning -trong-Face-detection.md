@@ -7,8 +7,6 @@ tags: [opencv, facedetection, deeplearning]
 comments: true
 ---
 
-Ban co the xem bai viet goc o day [english](https://www.pyimagesearch.com/2018/02/26/face-detection-with-opencv-and-deep-learning/)
-
 **Source code co san o bai goc**
 
 ## Su dung deep learning trong OpenCV de detec khuon mat
