@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Face detection
-subtitle: Su dung OpenCV va thu vien deep learning de detect khuon mat
+subtitle: Sử dụng OpenCV và deep learning trong detect khuôn mặt
 bigimg: /img/post1.1.PNG
 tags: [opencv, facedetection, deeplearning]
 comments: false
@@ -29,7 +29,7 @@ Một số network tương thích với OpenCV bao gồm các mạng phổ biế
 - ResNet.
 
 Phần lớn người dùng OpenCV ít biết rằng có face detector đủ chính xác sử dụng deep learning [here](https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector).
-<img https://github.com/quanap5/quanap5.github.io/blob/master/img/face_detector.PNG>
+![](img https://github.com/quanap5/quanap5.github.io/blob/master/img/face_detector.PNG)
 
 Khi sử dụng deep learning model trong OpenCV với Caffe models chúng ta cần lưu ý hai files:
 - File .prototxt chứa model architecture (layers,...)
@@ -107,9 +107,9 @@ cv2.waitKey(0)
 
 Từ code ta thấy có 3 tham số bắt buộc cần được truyền vào.
 
-- [image] : đường dẫn ảnh đầu vào
-- [prototxt]: đường dẫn đến Caffe prototxt file
-- [model]: đường dẫn đến file trọng số và một tham số tùy chọn là [confidence]
+- image: đường dẫn ảnh đầu vào
+- prototxt: đường dẫn đến Caffe prototxt file
+- model: đường dẫn đến file trọng số và một tham số tùy chọn là confidence.
  
 Đầu tiên phải load model và lưu vào biến net sử dụng
 ```python
