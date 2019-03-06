@@ -4,7 +4,7 @@ title: Face detection
 subtitle: Su dung OpenCV va thu vien deep learning de detect khuon mat
 bigimg: /img/post1.1.PNG
 tags: [opencv, facedetection, deeplearning]
-comments: true
+comments: false
 ---
 
 ## Sử dụng deep learning trong OpenCV để detect khuôn mặt
@@ -101,39 +101,20 @@ cv2.imshow("Output", image)
 cv2.waitKey(0)
 ```
 
-Day la snip code:
-
-```python
-# import the necessary packages
-import numpy as np
-import argparse
-import cv2
- 
-# construct the argument parse and parse the arguments
-ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--image", required=True,
-	help="path to input image")
-ap.add_argument("-p", "--prototxt", required=True,
-	help="path to Caffe 'deploy' prototxt file")
-ap.add_argument("-m", "--model", required=True,
-	help="path to Caffe pre-trained model")
-ap.add_argument("-c", "--confidence", type=float, default=0.5,
-	help="minimum probability to filter weak detections")
-args = vars(ap.parse_args())
-```
 
 ### Giải thích qua về code:
 
 Từ code ta thấy có 3 tham số bắt buộc cần được truyền vào.
----------------
 - [--image] : đường dẫn ảnh đầu vào
 - [--prototxt]: đường dẫn đến Caffe prototxt file
 - [--model]: đường dẫn đến file trọng số
  và một tham số tùy chọn là [--confidence]
+ 
 Đầu tiên phải load model và lưu vào biến net sử dụng
 ```python
 net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
 ```
+
 Để mạng có thể perform ảnh đầu vào chúng ta phải tiền xử lý bằng cách chuyển về dạng khả dụng với model. Chúng ta hiểu chuyển ảnh về dang  blob  sử dụng với các công việc liên quan đến chiều cao, chiều rộng, chuẩn hóa, scale,.... [Tìm hiểu thêm](https://www.pyimagesearch.com/2017/11/06/deep-learning-opencvs-blobfromimage-works) về blobFromImage
 ```python
 blob = cv2.dnn.blobFromImage
@@ -144,6 +125,7 @@ Mọi thứ đã sẵn sàng, tiếp theo chúng ta apply detect face bằng đo
 net.setInput(blob)
 detections = net.forward()
 ```
+
 Để visual kết quả chúng ta sử dụng đoạn code sau với các hàm để vẽ hình chữ nhật cũng như thông tin về confidences.
 ```python
 cv2.rectangle
@@ -152,6 +134,10 @@ cv2.putText
 Sử dụng vòng loop để xử lý nhiều đối tượng khuôn mặt và code đầy đủ như trên.
 
 ### Chạy command
+```python
+python detect_faces.py --image face_quan.jpg --prototxt deploy.prototxt.txt --model res10_300x300_ssd_iter_140000.caffemodel
+```
+Chúng ta có kết quả như sau:
+![ketqua](https://github.com/quanap5/quanap5.github.io/blob/master/img/demoOnsingleImage.PNG)
 
-## Demo nhieu khuon mat
 [Demo](https://github.com/quanap5/quanap5.github.io/blob/master/img/20190303_021246.mp4)
