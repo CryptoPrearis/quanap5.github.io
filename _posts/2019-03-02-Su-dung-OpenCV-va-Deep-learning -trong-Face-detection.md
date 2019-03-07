@@ -30,7 +30,7 @@ Một số network tương thích với OpenCV bao gồm các mạng phổ biế
 
 Phần lớn người dùng OpenCV ít biết rằng có face detector đủ chính xác sử dụng deep learning [here](https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector).
 
-![như hình](https://github.com/quanap5/quanap5.github.io/blob/master/img/face_detector.jpg)
+![như hình](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/face_detector.jpg)
 
 Khi sử dụng deep learning model trong OpenCV với Caffe models chúng ta cần lưu ý hai files:
 - File .prototxt chứa model architecture (layers,...)
@@ -140,6 +140,6 @@ Sử dụng vòng loop để xử lý nhiều đối tượng khuôn mặt và c
 python detect_faces.py --image face_quan.jpg --prototxt deploy.prototxt.txt --model res10_300x300_ssd_iter_140000.caffemodel
 ```
 Chúng ta có kết quả như sau:
-![ketqua](https://github.com/quanap5/quanap5.github.io/blob/master/img/demoOnsingleImage.jpg)
+![ketqua](https://quanap5.github.io/img/demoOnsingleImage.jpg)
 
 [Demo](https://github.com/quanap5/quanap5.github.io/blob/master/img/20190303_021246.mp4)
