@@ -247,4 +247,4 @@ vs = VideoStream(src=0).start()
 time.sleep(2.0)
 ```
 ### Demo
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/JMAwdvzYJe8)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/JMAwdvzYJe8/0.jpg)](https://youtu.be/JMAwdvzYJe8)
