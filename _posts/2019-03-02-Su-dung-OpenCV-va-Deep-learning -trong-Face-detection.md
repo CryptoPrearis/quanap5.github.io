@@ -143,7 +143,8 @@ Chúng ta có kết quả như sau:
 ![ketqua](https://quanap5.github.io/img/demoOnsingleImage.jpg)
 
 ## Dây là một ví dụ khác cho nhiều khuôn mặt
-![multi](quanap5.github.io/img/post1.2_multi.png)
+![multi](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/post1.2_multi.png)
+
 Bức ảnh qua điên thoại cũng được nhận diện rất tốt. Đây là chuyến du lich qua Đài Loan của tôi và đứa em. :smiley_cat:
 
 ### Face detection trên video và webcam
