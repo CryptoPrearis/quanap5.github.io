@@ -80,7 +80,8 @@ cv2.waitKey(0)
 
 Bây giờ lúc chúng ta cũng tìm hiểu các bước của ứng dung này. Xem có gì hay ho.
 Chúng ta sẽ sử dụng đoạn script Python trên cùng với OpenCV để đểm số object có trong bước ảnh sau.
-![input]()
+![input](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/tetris_blocks.png).
+
 Các kỹ thuật được sử dụng bao gồm:
 - Chuyển ảnh đầu vào sang grayscale với OpenCV
 - Kỹ thuật edge detection (lấy đường biên)
@@ -105,7 +106,10 @@ cv2.imshow("Gray", gray)
 cv2.waitKey(0)
 ```
 
-Chúng ta dùng hàm imread để load ảnh vào bộ nhớ, và hiện thị bằng hàm imshow được support bởi thư viện OpenCV. Trong quá trình xử lý yêu cầu phải detect đường biên và binarty dùng thresholding nên chúng ta cần chuyển ảnh ban đầu về dạng ảnh xảm thông qua hàm gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY). Đây là kết quả.
+Chúng ta dùng hàm imread để load ảnh vào bộ nhớ, và hiện thị bằng hàm imshow được support bởi thư viện OpenCV. Trong quá trình xử lý yêu cầu phải detect đường biên và binarty dùng thresholding nên chúng ta cần chuyển ảnh ban đầu về dạng ảnh xảm thông qua hàm gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY).
+
+Đây là kết quả.
+
 ![grayscale](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/gray.JPG)
 
 ### Edge detection
@@ -119,6 +123,7 @@ cv2.imshow("Edged", edged)
 cv2.waitKey(0)
 ```
 Kết quả.
+
 ![grayscale](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/edge.JPG)
 
 ### Thresholding
@@ -134,6 +139,7 @@ cv2.waitKey(0)
 Chúng ta cùng chú ý vào dòng code cv2.threshold(gray, 225, 255, cv2.THRESH_BINARY_INV). Tất cả các điểm ảnh có giá trị gray lớn hơn 225 sẽ chuyển thành 255 (màu trắng) còn lại những điểm ảnh có giá trị gray nhỏ hơn 225 sẽ chuyển về giá trị 0 (màu đen). Màu đen sẽ tương ứng với background và màu trắng là foreground. Các bạn có thể tìm hiểu cụ thể và chi tiết hơn tại [link](https://docs.opencv.org/3.4.0/d7/d1b/group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a19120b1a11d8067576cc24f4d2f03754).
 
 Kết quả là.
+
 ![grayscale](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/thresholding.JPG)
 
 ### Xác định và vẽ đường bao
@@ -161,7 +167,9 @@ cv2.imshow("Contours", output)
 cv2.waitKey(0)
 ```
 Kết quả như sau.
+
 ![animation](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/Webp.net-gifmaker.gif)
 
 Kết quả khác.
+
 ![grayscale](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/counting2.JPG)
