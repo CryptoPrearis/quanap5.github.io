@@ -7,9 +7,7 @@ tags: [document, scanner, image processing]
 comments: false
 ---
 
-## Cái nhìn tổng quan
 
-![intro]()
 
 ### Các bước để xây dựng ứng dụng scaner tài liệu
 
