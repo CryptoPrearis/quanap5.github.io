@@ -48,6 +48,8 @@ Mặc định notebook vừa tạo ra sẽ chạy với CPU. Bạn nên cài đ�
 
 Nào chúng ta bắt đầu chạy thử code trên này xem sao?
 
+![demopython](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/demo1python.JPG)
+
 Dường như mọi thứ đã như mong muốn.
 
 ### Kết nối với Drive
