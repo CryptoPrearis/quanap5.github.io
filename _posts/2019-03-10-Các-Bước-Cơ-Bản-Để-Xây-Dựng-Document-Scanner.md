@@ -2,7 +2,6 @@
 layout: post
 title: Các bước cơ bản của Document Scaner
 subtitle: tiền xử lý scan tài liệu
-bigimg: /img/header.JPG
 tags: [document, scanner, image processing]
 comments: false
 ---
