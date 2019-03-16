@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Các bước cơ bản của Document Scaner
-subtitle: tiền xử lý scan tài liệu
-tags: [document, scanner, image processing]
+title: Ứng dụng cho đề thi trắc nghiệm
+subtitle: check đáp án đề thi trắc nghiệm dùng xử lý ảnh
+tags: [document, scanner, multi choise]
 comments: false
 ---
 
@@ -117,7 +117,7 @@ cv2.imshow("Contour", image)
 
 Kết quả.
 
-![contour](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/warp_tracnghiem.JPG)
+![contour](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/bouding_tracnghiem.JPG)
 
 Như vậy chúng ta đã tìm được outline của phần tờ trả lời. Và đến lúc chúng ta dùng phép chuyển đổi rất hay trong xử lý ảnh là perspective transform để nhận đc hình ảnh nhìn từ trên xuống.
 
