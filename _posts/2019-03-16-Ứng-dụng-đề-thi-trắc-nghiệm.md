@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Ứng dụng cho đề thi trắc nghiệm
-subtitle: check đáp án đề thi trắc nghiệm dùng xử lý ảnh
-tags: [document, scanner, multi choise]
+title: Các bước cơ bản của Document Scaner
+subtitle: tiền xử lý scan tài liệu
+tags: [document, scanner, image processing]
 comments: false
 ---
 
@@ -117,7 +117,7 @@ cv2.imshow("Contour", image)
 
 Kết quả.
 
-![contour](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/bouding_tracnghiem.JPG)
+![contour](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/warp_tracnghiem.JPG)
 
 Như vậy chúng ta đã tìm được outline của phần tờ trả lời. Và đến lúc chúng ta dùng phép chuyển đổi rất hay trong xử lý ảnh là perspective transform để nhận đc hình ảnh nhìn từ trên xuống.
 
@@ -172,9 +172,83 @@ Một lần nữa chúng ta lại phải đi tìm contour trên ảnh binary đ�
 
 ![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/dapan_tracnghiem.JPG)
 
+### Tính điểm
 
+Tiếp theo chúng ta sẽ thực hiên để tính điểm của bài thi trắc nghiệm. Bước trên chúng ta đã lọc được các vùng đánh dấu như kết quả (highlight bởi khoanh tròn màu đen).
 
+```python
+# sort the question contours top-to-bottom, then initialize
+# the total number of correct answers
+questionCnts = contours.sort_contours(questionCnts,
+	method="top-to-bottom")[0]
+correct = 0
 
+# each question has 5 possible answers, to loop over the
+# question in batches of 5
+for (q, i) in enumerate(np.arange(0, len(questionCnts), 5)):
+	# sort the contours for the current question from
+	# left to right, then initialize the index of the
+	# bubbled answer
+	cnts = contours.sort_contours(questionCnts[i:i + 5])[0]
+	bubbled = None
+```
 
+Chúng ta phải sort questionCnts từ trên xuống dưới (top-to-down). Mục đích của việc này là đảm bảo thự các contour sẽ đúng thưs tự các câu hỏi.
 
-### Tổng kết
+Chúng ta cũng khai báo biến corect =0 để track số lượng câu đúng.
+
+Bắt đầu ở vòng lặp, mỗi câu hỏi có 5 đáp án (A-B-C-D-E). Ta sẽ dùng mảng NumPy và sort current question từ trái sang phải. Việc này là cần thiết vì trước đó ta đã sort các bubbed từ trên xuống nhưng chưa thể chắc chắn cac bubbed này sắp xếp từ trái sang phải.
+
+Đê xem sắp xếp của chúng ta thế nào hãy xem kết qua sau.
+
+![sorttop_down](https://media.giphy.com/media/5zw9WiS9isqUoYbyOC/giphy.gif) ![](https://media.giphy.com/media/DZYtMs93LUhFZjZ1zd/giphy.gif)
+
+Với kết quả đã thực hiên được ở tren, chúng ta tiếp theo cần xác định vị trí bubbed nào được đánh dấu. Bằng việc sử dụng kỷ thuật thresh và đếm số lượng pixel khác không. 
+
+```python
+	for (j, c) in enumerate(cnts):
+		# construct a mask that reveals only the current
+		# "bubble" for the question
+		mask = np.zeros(thresh.shape, dtype="uint8")
+		cv2.drawContours(mask, [c], -1, 255, -1)
+
+		# apply the mask to the thresholded image, then
+		# count the number of non-zero pixels in the
+		# bubble area
+		mask = cv2.bitwise_and(thresh, thresh, mask=mask)
+		total = cv2.countNonZero(mask)
+
+		# if the current total has a larger number of total
+		# non-zero pixels, then we are examining the currently
+		# bubbled-in answer
+		if bubbled is None or total > bubbled[0]:
+			bubbled = (total, j)
+```
+
+Đây là vòng lặp trên mỗi dòng bubbed. Chúng ta tạo một mặt nạ cho dòng đang được xét và đếm số lượng pixel khác không.
+
+Kết quả.
+
+![](https://media.giphy.com/media/7JEV4BVzQvJOLfJuYF/giphy.gif)
+
+Rõ ràng ta thấy những đáp án được đánh dấu sẽ là phần có nhiều pixel khác không nhất.
+Phần tiếp theo chúng ta sẽ tìm đáp án và cập nhật số lượng câu trả lời đúng.
+
+```python
+# initialize the contour color and the index of the
+	# *correct* answer
+	color = (0, 0, 255)
+	k = ANSWER_KEY[q]
+
+	# check to see if the bubbled answer is correct
+	if k == bubbled[1]:
+		color = (0, 255, 0)
+		correct += 1
+		
+	# draw the outline of the correct answer on the test
+	cv2.drawContours(paper, [cnts[k]], -1, color, 3)
+```
+
+Dựa đáp án được chọn là đúng hay sai. 
+
+![ketqua](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/results.JPG)
