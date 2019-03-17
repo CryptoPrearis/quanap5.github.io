@@ -169,6 +169,7 @@ for c in cnts:
 ![binary_tracnghiem](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/binary_tracnghiem.JPG)
 
 Một lần nữa chúng ta lại phải đi tìm contour trên ảnh binary để phân biệt background và foreground. Đoạn code còn lại trên là nhằm mục đich này. Để xác định đâu là những khoang tròn "bubbed" chúng ta tính bounding box (cv2.boundingRect(c)) suy ra đc tỷ lệ và ta chon tỷ lệ (0.9-1.1) để đảm bảo là hình vuông. Đồng thời chiều chiều cao và chiều rộng ít nhất là 20 pixels. Ta có kết quá trên cả tuyệt vời như sau.
+
 ![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/dapan_tracnghiem.JPG)
 
 
