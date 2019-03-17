@@ -33,7 +33,9 @@ Các bước để xử lý:
 - Bước 7: Lặp lại cho các câu hỏi khác trong bài test.
 
 Phần tiếp theo sẽ là hướng dẫn về quá trình thực hiện.
+
  ### code
+ 
  ```python
  # import the necessary packages
 from imutils.perspective import four_point_transform
@@ -53,6 +55,7 @@ args = vars(ap.parse_args())
 # to the correct answer
 ANSWER_KEY = {0: 1, 1: 4, 2: 0, 3: 3, 4: 1}
  ```
+ 
 Chắc chắn là chúng ta đã cài OpenCV và Numpy. Bên cạnh đó gói imtils cũng cần thiết, gói xử lý ảnh này tôi đã giới thiệu ở các bài viết trước.
 
 Chúng ta cần lưu ý ANSWER_KEY là thông tin về câu trả lời đúng với vị trí của "bubbed".
@@ -71,6 +74,7 @@ Theo quy luật này ta có bảng đáp án đúng là.
 
 Tiếp theo chúng ta sẽ tiền xử lý ảnh đầu vào với các xử lý như đọc ảnh (imread), chuyển ảnh về dạng gray (cvtColor), blur(GaussianBlur), tìm biên với thuật toán Canny.
 
+
 ```python
 # load the image, convert it to grayscale, blur it
 # slightly, then find edges
@@ -79,7 +83,9 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 blurred = cv2.GaussianBlur(gray, (5, 5), 0)
 edged = cv2.Canny(blurred, 75, 200)
 ```
+
 Ta có kết quả nhẹ:
+
 ![preprocessing_tracnghiem](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/preprocessing_tracnghiem.JPG)
 
 Tiếp dựa trên hình ảnh của đường biên. Chúng ta sẽ làm một việc khá quan trọng đó là tìm outline của tờ trả lời bằng kỹ thuật lấy contour.
@@ -113,6 +119,7 @@ if len(cnts) > 0:
 cv2.drawContours(image, [docCnt],-1, (255,0,0), 2)
 cv2.imshow("Contour", image)
 ```
+
  Áp dụng tìm contour bawgf hàm cv2.findContours có trong cv. Sau đó những contour này được sort từ diện tích lớn nhất cho đến nhỏ nhất (cnts = sorted(cnts, key=cv2.contourArea, reverse=True)) sau khi chúng ta chắc chắn có ít nhất 1 contuor dc phát hiên (len() >0). Kết quả của sort() chúng ta sẽ có contour của tờ trả lời trác nghiệm sẽ ở đầu của danh sách cac contour. Tuy nhiên điều kiện về contour và dienj tích cũng có thể là chưa đủ, nên chúng ta sẽ check thêm một điều kiện về số điểm của approxPolyDP(). Đây là hàm ước lượng hình thù của contour [more here](https://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html).
 
 Kết quả.
