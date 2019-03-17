@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Các bước cơ bản của Document Scaner
-subtitle: tiền xử lý scan tài liệu
-tags: [document, scanner, image processing]
+title: Ứng dụng chấm thi trắc nghiệm
+subtitle: Chấm thi trắc nghiệm sử dụng xử lý ảnh
+tags: [document, scanner, multi-choise]
 comments: false
 ---
 
