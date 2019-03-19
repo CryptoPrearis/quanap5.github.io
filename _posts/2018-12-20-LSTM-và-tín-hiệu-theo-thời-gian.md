@@ -138,3 +138,9 @@ model.fit(X, y, epochs=2000, verbose=0)
 Sau khi model được fit(), chúng ta có thể dùng nó để dự đoán. Ví dụ, chúng ta dự đoán giá trị tiếp theo của chuối [70, 80, 90]. Chúng ta hi vọng model sẽ đoán cái gì đó gần bằng 100. Đầu ra model sẽ có dạng [samples, feature] vì vậy chúng ta phải reshape một mẫu đàu vào trước khi dự đoán. Ví dụ [1, 3] là 1 sample và 3 time steps sử dụng như input features.
 
 ![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/mlp_02.JPG)
+
+Mot so ket qua khac:
+
+![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/mlp_03.JPG)
+
+![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/mlp_04.JPG)
