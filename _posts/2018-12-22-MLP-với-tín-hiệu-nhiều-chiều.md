@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Làm quen với Deep Learning trong time series data
-subtitle: tìm hiểu RNN, LSTM, ...
-tags: [deep learning, Lstm, time series data]
+title: MLP với tín hiệu nhiều chiều
+subtitle: MLP dơn giản dự đoán tín hiệu nhiều chiều  trên time
+tags: [MLP, Lstm, time series data]
 comments: false
 ---
 
