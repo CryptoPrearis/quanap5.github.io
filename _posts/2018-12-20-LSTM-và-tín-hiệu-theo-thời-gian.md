@@ -122,6 +122,7 @@ model = Sequential()
 model.Add(Dense(100, activation='relu', input_dim=n_steps))
 model.Add(Dense(1))
 model.compile(optimizer='adam', loss='mse')
+```
 
 Điều quan trọng trong định nghĩa này chúng ta cần chú ý shape của đầu vào. Cái này chính là chiều của đầu vào bằng đúng time step mà chúng ta đã định nghĩa ở phan split data. Về mặt kỹ thuật model sẽ nhìn mỗi input đầu vào dưới dạng các feature thay cho các giá trị các cac time step khác nhau của chuỗi.
 
