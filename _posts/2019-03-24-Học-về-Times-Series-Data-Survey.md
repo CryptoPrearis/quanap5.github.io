@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Day 00 Survey
-subtitle: ứng dụng detect blink của eyes
+title: Khảo sát các phương pháp tiếp cân Time Series data
+subtitle: khảo sát
 tags: [time series data]
 comments: false
 ---
