@@ -113,6 +113,7 @@ for i in range(len(X)):
 Kết quả:
 
 ![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/mlp02_02.JPG)
+
 Định ngĩa model MLP với các lớp như sau:
 
 ```python
