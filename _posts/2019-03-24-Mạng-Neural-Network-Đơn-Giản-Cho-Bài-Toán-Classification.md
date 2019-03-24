@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mạng Neural Network đưn giản với thư viện Keras 
+title: Mạng Neural Network đơn giản với thư viện Keras 
 subtitle: classification
 tags: [CNN, classification]
 comments: false
