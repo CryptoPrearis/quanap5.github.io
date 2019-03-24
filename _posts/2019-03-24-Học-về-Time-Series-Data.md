@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Học về Time Series Data
-subtitle: Ngày 1: Tiềm năng và hứa hẹn của Deep Learning
+subtitle: Ngày 1 Tiềm năng và hứa hẹn của Deep Learning
 tags: [time series data]
 comments: false
 ---
