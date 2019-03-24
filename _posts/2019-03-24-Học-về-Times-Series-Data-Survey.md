@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Học về Time Series Data
-subtitle: Ngày 0: Survey
-tags: [time series data]
+title: Day 00: Survey
+subtitle: ứng dụng detect blink của eyes
+tags: [eye, land mark]
 comments: false
 ---
 
 
-## Introduction
+### Introduction
 
 Target: Detect or predict alarm event of industrial system based on the time series data (sequence of observation over time line): For example, monitoring signal from sensor devices such as temperature, humidity, pressure, variation sensor, ... for warning about the anomaly situation.
 
 Method: Using deep learning based method on time series data.
  
-## Survey
+### Survey
 
 We can form our problem as Classification or Prediction.
 Classification: We have to training data in both situation normal and anomaly (alarm event) to support for training deep learning based classifier.
