@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Day 00: Survey
+title: Day 00 Survey
 subtitle: ứng dụng detect blink của eyes
 tags: [time series data]
 comments: false
