@@ -2,7 +2,7 @@
 layout: post
 title: Giới thiệu về các lọa Convolution dùng trong DeepLearning
 subtitle: lập trình, học tập
-tags: [Dêp learning, convolution, CNN]
+tags: [Deep learning, convolution, CNN]
 comments: false
 ---
 
