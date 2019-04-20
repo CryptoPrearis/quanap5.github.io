@@ -61,4 +61,4 @@ Loại này có thể gọi là deconvolution nhưng thực tế phép này hoà
 
 # Separable Convolution
 
-Lọa này có nghĩa là thay vì chúng ta convolution tren một kernel thi chũng ta sẽ convolution tren 2 kernel khac nhau. Ví dụ 2D convolution bang cách thực hiên 2 convolution 1D.
+Loại này có nghĩa là thay vì chúng ta convolution tren một kernel thi chũng ta sẽ convolution trên 2 kernel khác nhau. Ví dụ 2D convolution bằng cách thực hiện 2 convolution 1D. Ví dụ như tính edge bằng thuật toán Sonel. Chúng ta sẽ filter ảnh đàu vào theo trục x và trục y trước sau đó tổng hợp kết quả lại.
