@@ -51,6 +51,8 @@ Hình sau đay minh họa cho lạo dilated convolution này.
 
 Loại convolution này sẽ làm rộng (field of view) nhưng vẫn giữ nguyên khối lượng tính toán. Dilated convolutions được sử dụng nhiều trong các ứng dụng real-time segmentation.
 
+![](https://www.researchgate.net/profile/Xiaofan_Zhang18/publication/323444534/figure/fig9/AS:631623057956913@1527602080819/3-3-convolution-kernels-with-different-dilation-rate-as-1-2-and-3.png)
+
 # Transposed convolution
 
 ![](https://raw.githubusercontent.com/vdumoulin/conv_arithmetic/master/gif/padding_strides_transposed.gif)
