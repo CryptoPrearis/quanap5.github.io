@@ -6,12 +6,14 @@ tags: [Data manipulation]
 comments: false
 ---
 
+
 ### Transpose với arayFire
 
 Transpose là một phép chuyển hóa data (data manipulation)
  rất hay dùng cùng với phép reshape để tạo data theo format phù hợp với input của mạng neural network.
  
  Hôm nay tôi sẽ tìm hiểu về các đọc data từ aray của thư viên [ArrayFire](https://arrayfire.com/).
+ 
  
  ### Các bước thực hiện
  
@@ -73,4 +75,8 @@ Shape:
 
 ![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/debugZ04.PNG) 
   
-  
+
+Mô tả ở đây:
+
+![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/IMG_6538.jpg)
+
