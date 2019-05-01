@@ -33,3 +33,6 @@ Bạn có thể tìm hiểu và đọc thêm tại [đây](http://cs231n.github.
 
 ![](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_4/MaxPoolingLayer.png)
  
+### 
+
+![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/nhap.jpg)
