@@ -29,6 +29,7 @@ Bạn có thể tìm hiểu và đọc thêm tại [đây](http://cs231n.github.
 
 ![](http://cs231n.github.io/assets/cnn/maxpool.jpeg)
 
+
 ### Cách thực hiện
 
 ![](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_4/MaxPoolingLayer.png)
@@ -36,3 +37,7 @@ Bạn có thể tìm hiểu và đọc thêm tại [đây](http://cs231n.github.
 ### 
 
 ![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/nhap.jpg)
+
+![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/pooling01.jpeg)
+
+![](https://raw.githubusercontent.com/quanap5/quanap5.github.io/master/img/pooling02.jpeg)
