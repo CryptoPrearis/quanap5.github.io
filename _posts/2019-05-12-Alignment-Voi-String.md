@@ -8,6 +8,7 @@ comments: false
 
 ### Giới thiệu
 
+
 Hôm nay sẽ tìm hiểu về align string trong C# sử dụng String.Format.
 
 Để căn lề bên trái bên phải chúng ta sẽ sử dụng String.Format với tham số như sau.
@@ -39,6 +40,7 @@ foreach (var layer in Layers)
             }
             Console.WriteLine("Total params: " + TotalParams);
 ```
+
 
 Ta có kết quả trên console như sau.
 
