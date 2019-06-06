@@ -1,8 +1,8 @@
 ---
 layout: post
-title: TensorFlow Cơ Bản: Tensor, Shape, Graph, Session và Operation
-subtitle: Backend Deep
-tags: [neural network, RNN, tensorflow]
+title: Tensorflow
+subtitle: tensorflow
+tags: []
 comments: false
 ---
 
