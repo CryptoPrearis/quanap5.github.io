@@ -6,6 +6,7 @@ tags: [neural network, RNN, tensorflow]
 comments: false
 ---
 
+
 ### Tensor là gì?
 
 Cái tên Tensorflow xuất phát từ cái cốt lõi của framework này là Tensor và Flow (Graph). Tất cả tính toán điều liên quan đến một đối tượng gọi là Tensor. Một tensor là một vector ta đã quen thuộc hoạc là matrix với N chiều, dùng để thể hiện tất cả các loại data cần thiết .Do vậy Tensor cũng đặc  trưng bới loại data và shape của nó. Shape là size các chiều của array hay matrix.
@@ -49,7 +50,4 @@ sess.run(tf.global_variables_initializer())  # initialize variables
 sess.run(test_var)
 # array([111, 11, 1], dtype=int32)
 ```
-
-
-
 
