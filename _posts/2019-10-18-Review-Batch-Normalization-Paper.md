@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Review paper: Batch Normalization Accelerate Deep Network Training by Reducing Internal Covariate Shift
+title: Review paper Batch Normalization Accelerate Deep Network Training by Reducing Internal Covariate Shift
 subtitle: selfstudy
 tags: [Review]
 comments: false
