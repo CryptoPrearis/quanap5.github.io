@@ -2,9 +2,10 @@
 layout: post
 title: Review paper: Batch Normalization Accelerate Deep Network Training by Reducing Internal Covariate Shift
 subtitle: selfstudy
-tags: [Review, BatchNormal, Deep learning]
+tags: [Review]
 comments: false
 ---
+
 
 ### Tóm tắt
 
